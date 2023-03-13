@@ -3,9 +3,12 @@ const { newNote } = require("../../db/notes");
 let { notesArray } = require("../../db/db.json");
 
 router.get("/notes", (req, res) => {
-  let response = notesArray;
-  res.json(results);
+  console.info(`${req.method} request received for feedback`);
+
+  readFromFile("../../db/db.json").then((data) => res.json(JSON.parse(data)));
+  console.log(data);
 });
+
 router.post("/notes", (req, res) => {
   if (notesArray) {
     req.body.id = notesArray.length.toString();
@@ -14,3 +17,4 @@ router.post("/notes", (req, res) => {
   }
   res.json(newNote(req.body, notesArray));
 });
+module.exports = router;

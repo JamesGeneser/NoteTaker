@@ -1,15 +1,15 @@
-const htmlRouter = require("express").Router();
+const router = require("express").Router();
 const path = require("path");
-htmlRouter.get("/", (req, res) =>
+router.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "../../public/index.html"))
 );
 
-htmlRouter.get("/notes", (req, res) =>
+router.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/../..public/notes.html"))
 );
 
-htmlRouter.get("*", (req, res) =>
+router.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "/../..public/index.html"))
 );
 
-module.exports = htmlRouter;
+module.exports = router;
