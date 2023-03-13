@@ -35,20 +35,6 @@ const getNotes = () =>
     },
   });
 
-//   const getTips = () =>
-//   fetch('api/tips', {
-//     method: 'GET', // or 'PUT'
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     // body: JSON.stringify(data),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => data)
-//     .catch((error) => {
-//       console.error('Error:', error);
-//     });
-
 const saveNote = (note) =>
   fetch("/api/notes", {
     method: "POST",
