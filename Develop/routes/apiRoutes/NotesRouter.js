@@ -1,12 +1,11 @@
 const router = require("express").Router();
-const { newNote } = require("../../db/notes");
-let { notesArray } = require("../../db/db.json");
+const { newNote } = require("../../lib/notes");
+let { notesArray } = require("../../db/notes");
 
 router.get("/notes", (req, res) => {
   console.info(`${req.method} request received for feedback`);
-
-  readFromFile("../../db/db.json").then((data) => res.json(JSON.parse(data)));
-  console.log(data);
+  let response = notesArray;
+  res.json(response);
 });
 
 router.post("/notes", (req, res) => {

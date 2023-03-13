@@ -10,3 +10,13 @@ function newNote(body, notesArray) {
   );
   return note;
 }
+
+fs.writeFileSync(
+  path.join(__dirname, "./db.json"),
+  JSON.stringify({ notesArray }, null, 2)
+);
+// return notesArray;
+
+module.exports = {
+  newNote,
+};
