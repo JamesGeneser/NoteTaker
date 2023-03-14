@@ -4,8 +4,6 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-const app = express();
-
 if (window.location.pathname === "/notes") {
   noteTitle = document.querySelector(".note-title");
   noteText = document.querySelector(".note-textarea");
@@ -14,6 +12,7 @@ if (window.location.pathname === "/notes") {
   noteList = document.querySelectorAll(".list-container .list-group");
 }
 
+console.log("test");
 // Show an element
 const show = (elem) => {
   elem.style.display = "inline";
