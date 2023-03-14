@@ -24,16 +24,18 @@ api.post("/notes", (req, res) => {
       title,
       text,
     };
-    fs.readFile("../db/db,json", (err, data) => {
+    fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
       if (err) throw err;
       notesArray = JSON.parse(data);
       notesArray.push(newNote);
+      console.info(notesArray);
     });
 
     const response = {
       status: "success!",
       body: newNote,
     };
+
     res.json(response);
 
     // fs.readFile("../db/db.json", (err, data) => {

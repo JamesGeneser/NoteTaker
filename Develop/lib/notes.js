@@ -1,18 +1,18 @@
-const fs = require("fs");
-const util = require("util");
-// const path = require("path");
+// const fs = require("fs");
+// const util = require("util");
+// // const path = require("path");
 
-const readFilePromise = util.promisify(fs.readFile);
-const writeFilePromise = util.promisify(fs.writeFile);
+// const readFilePromise = util.promisify(fs.readFile);
+// const writeFilePromise = util.promisify(fs.writeFile);
 
-class noteItem {
-  read() {
-    return readFilePromise("../db/db.json", "utf8");
-  }
-  write(note) {
-    return writeFilePromise("../db/db.json", JSON.stringify(note));
-  }
-}
+// class noteItem {
+//   read() {
+//     return readFilePromise("../db/db.json", "utf8");
+//   }
+//   write(note) {
+//     return writeFilePromise("../db/db.json", JSON.stringify(note));
+//   }
+// }
 
 // function newNote(body, notesArray) {
 //   const note = body;
@@ -48,4 +48,4 @@ class noteItem {
 //   newNote,
 //   deleteNote,
 // };
-module.exports = new noteItem();
+// module.exports = new noteItem();
