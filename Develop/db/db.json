@@ -1,26 +1,27 @@
 [
     {
+        "id": "1",
         "title": "Buy groceries",
         "text": "oranges, yogurt, and bread"
     },
     {
-        "title": "tallu",
-        "text": "one"
+        "id": "2",
+        "title": "New Post",
+        "text": "some items"
     },
     {
-        "title": "newNote",
-        "text": "here's some text"
+        "id": "254bef76-e249-40a0-9684-6cbf8ca7e1a0",
+        "title": "Here's ",
+        "text": "note text"
     },
     {
-        "title": "newNote",
-        "text": "here's some more text"
+        "id": "30b084c4-5640-4ece-96be-ba6f2407337e",
+        "title": "newer not",
+        "text": "text"
     },
     {
-        "title": "newNote",
-        "text": "here's some more text"
-    },
-    {
-        "title": "Test",
-        "text": "is this working?"
+        "id": "baafa248-c580-4a29-a0ce-4a2823db52c1",
+        "title": "double chekc",
+        "text": "text"
     }
 ]
