@@ -1,7 +1,26 @@
-
 [
     {
-        "title":"Buy groceries",
-        "text":"oranges, yogurt, and bread"
+        "title": "Buy groceries",
+        "text": "oranges, yogurt, and bread"
+    },
+    {
+        "title": "tallu",
+        "text": "one"
+    },
+    {
+        "title": "newNote",
+        "text": "here's some text"
+    },
+    {
+        "title": "newNote",
+        "text": "here's some more text"
+    },
+    {
+        "title": "newNote",
+        "text": "here's some more text"
+    },
+    {
+        "title": "Test",
+        "text": "is this working?"
     }
 ]

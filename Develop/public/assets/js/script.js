@@ -68,7 +68,6 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
-  console.log("saving a new note");
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
@@ -121,8 +120,8 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  console.log("notes recieved");
   let jsonNotes = await notes.json();
+
   if (window.location.pathname === "/notes") {
     noteList.forEach((el) => (el.innerHTML = ""));
   }

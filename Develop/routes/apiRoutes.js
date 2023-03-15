@@ -2,7 +2,7 @@ const api = require("express")();
 const { newNote } = require("../lib/notes");
 // const { readFromFile } = require()
 const fs = require("fs");
-
+const { readAndAppend, readFromFile } = require("../helpers/fsUtil");
 const path = require("path");
 
 api.get("/notes", (req, res) => {
@@ -24,20 +24,23 @@ api.post("/notes", (req, res) => {
       title,
       text,
     };
-    fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
-      if (err) throw err;
-      notesArray = JSON.parse(data);
-      notesArray.push(newNote);
-      console.info(notesArray);
-    });
 
+    readAndAppend(newNote, path.join(__dirname, "../db/db.json"));
+    // fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
+    //   if (err) throw err;
+    //   notesArray = JSON.parse(data);
+    //   notesArray.push(newNote);
+    //   console.info(notesArray);
+    // });
+    // fs.writeFile(path.join(__dirname, "../db/db.json"), notesArray);
     const response = {
       status: "success!",
       body: newNote,
     };
 
     res.json(response);
-
+    res.json(newNote);
+    console.info(newNote);
     // fs.readFile("../db/db.json", (err, data) => {
     //   if (err) throw err;
 
